@@ -50,7 +50,7 @@ import PaymentForm from "../pages/PaymentForm";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import SearchField from "../components/common/SearchField";
 import SignUp from "../Auth/Users/SignUp";
-import Drawer from "../components/common/drawer.jsx";
+import Drawer from "../components/common/Drawer.jsx";
 
 
 
