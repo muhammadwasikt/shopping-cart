@@ -39,8 +39,7 @@ import { userReveiws } from "./constant/reviews.js";
 import OverHappyCustomers from "../components/common/OverHappyCustomers";
 import BrandName from "../components/common/BrandName";
 import MergProducts from "../components/common/MergProducts";
-import FooterContent from "../components/common/FooterContent";
-import Drawer from "../components/common/drawer";
+import FooterContent from "../components/common/FooterContent";;
 import NavLinks from "../components/common/NavLinks";
 import ProfileDropdown from "../components/common/ProfileDropDown";
 import {MdDeleteOutline } from 'react-icons/md';
@@ -51,7 +50,7 @@ import PaymentForm from "../pages/PaymentForm";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import SearchField from "../components/common/SearchField";
 import SignUp from "../Auth/Users/SignUp";
-
+import Drawer from "../components/common/drawer.jsx";
 
 
 
