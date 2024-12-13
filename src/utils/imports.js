@@ -3,7 +3,7 @@ import PageNotFound from "../components/common/PageNotFound";
 import AppLayout from "../pages/AppLayout";
 import Categories from "../pages/Categories";
 import MainPage from "../pages/MainPage";
-import NewArrivals from "../pages/NewArrivals";
+import Sales from "../pages/Sales.jsx";
 import Products from "../pages/Products";
 import Home from "../pages/Home";
 import { createRoot } from 'react-dom/client'
@@ -51,9 +51,13 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import SearchField from "../components/common/SearchField";
 import SignUp from "../Auth/Users/SignUp";
 import Drawer from "../components/common/Drawer.jsx";
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase.js";
+import { toast, ToastContainer } from "react-toastify";
+import userReducer, { removeUser, setUser } from '../redux/reducers/usersreducer.js'
+import UserLertModal from "../components/common/UserLertModal.jsx";
 
 
 
-
-
-export {Drawer ,SignUp ,SignIn ,SearchField ,IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, NewArrivals, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }
+export {Drawer ,userReducer ,UserLertModal ,removeUser,setUser , ToastContainer , toast ,SignUp ,SignIn ,signInWithEmailAndPassword ,SearchField ,auth ,initializeApp ,getAuth , createUserWithEmailAndPassword , IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, Sales, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }

@@ -1,17 +1,36 @@
-import { IoCloseCircleOutline, Link, SignUp, useForm, useState } from "../../utils/imports"
+import { auth, IoCloseCircleOutline, setUser, signInWithEmailAndPassword, SignUp, toast, ToastContainer, useDispatch, useForm, useNavigate, useState } from "../../utils/imports"
 
 
 const SignIn = () => {
 
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
     const [loader, setLoader] = useState(false)
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
     const onSubmit = (data) => {
+        const { email, password } = data
         setLoader(true)
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            toast.success('Your Account Successfully Login')
+            setLoader(false)
+            navigate('/home')
+            dispatch(setUser(user.uid))
+            reset()
+            document.getElementById('my_modal_2').hideModal()
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                setLoader(false)
+                toast.error(errorCode)
+            })
     }
 
     return (
@@ -57,7 +76,7 @@ const SignIn = () => {
                         <div className="flex justify-center gap-3 mt-5 ">
                             <span className="flex gap-1">Don't have an account?
                                 <form method="dialog">
-                                    <button onClick={()=>document.getElementById('sign_up').showModal()}>
+                                    <button onClick={() => document.getElementById('sign_up').showModal()}>
                                         Sign Up
                                     </button>
                                 </form>
@@ -72,6 +91,7 @@ const SignIn = () => {
                 </div>
             </div>
             <SignUp />
+            <ToastContainer />
         </dialog>
     )
 }

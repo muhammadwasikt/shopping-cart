@@ -1,6 +1,6 @@
-import { AppLayout, Categories, createBrowserRouter, Home, MainPage, NewArrivals, PageNotFound, Products} from "../utils/imports"
+import { AppLayout, Categories, createBrowserRouter, Home, MainPage, Sales, PageNotFound, Products} from "../utils/imports"
 import PaymentForm from "../pages/PaymentForm"
-import  SignUp  from "../Auth/Users/SignUp"
+
 
 export const routes = createBrowserRouter([
     {
@@ -25,7 +25,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: 'new-arrivals',
-                element: <NewArrivals />
+                element: <Sales />
             },
             {
                 path: 'payment-form',

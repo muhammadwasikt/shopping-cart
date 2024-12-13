@@ -1,17 +1,34 @@
-import { IoCloseCircleOutline, useForm, useState } from "../../utils/imports"
+import { auth, createUserWithEmailAndPassword, IoCloseCircleOutline, setUser, toast, ToastContainer, useDispatch, useForm, useNavigate, useState } from "../../utils/imports"
 
 
 const SignUp = () => {
 
     const [loader, setLoader] = useState(false)
+    const dispatch = useDispatch()
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
+    const navigate = useNavigate()
 
     const onSubmit = (data) => {
+        const { email, password } = data
         setLoader(true)
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            toast.success('Your Account Successfully Created')
+            setLoader(false)
+            navigate('/home')
+            dispatch(setUser(user.uid))
+            reset()
+        })
+        .catch((error) => {
+            toast.error(error)
+            setLoader(false)
+        })
     }
 
     return (
@@ -83,7 +100,7 @@ const SignUp = () => {
                     </form>
                 </div>
             </div>
-            {/* <SignUp /> */}
+            <ToastContainer />
         </dialog>
     )
 }

@@ -23,9 +23,9 @@ const Drawer = ({ category, addToCart }) => {
                         <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu bg-white text-base-content min-h-full w-80 p-4">
                             <h1 className='text-2xl font-bold pb-3 mb-3 border-b-2'>CATEGORIES</h1>
-                            {cat?.map((item , index) => (
+                            {cat?.map((item, index) => (
                                 <label htmlFor="my-drawer-4" key={index} aria-label="close sidebar" onClick={() => handleClick(item)} className='text-lg py-1 border-b-2 flex items-center gap-3'>
-                                    <input type="radio" name='check'/>
+                                    <input type="radio" name='check' />
                                     {item.toUpperCase()}
                                 </label>
                             ))}
@@ -65,6 +65,26 @@ const Drawer = ({ category, addToCart }) => {
                                 <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/home'>Home</Link></label>
                                 <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/products'>Products</Link></label>
                                 <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/new-arrivals'>New Arrivals</Link></label>
+                                <label htmlFor="my-drawer" aria-label="close sidebar" >
+                                    <div className='drawer-end'>
+                                    <input id="my-drawer-5" type="checkbox" className="drawer-toggle" />
+                                    <div className="drawer-content">
+                                        <label htmlFor="my-drawer-5" className="drawer-button">Categories</label>
+                                    </div>
+                                    <div className="drawer-side z-10">
+                                        <label htmlFor="my-drawer-5" aria-label="close sidebar" className="drawer-overlay"></label>
+                                        <ul className="menu bg-white text-base-content min-h-full w-80 p-4">
+                                            <h1 className='text-2xl font-bold pb-3 mb-3 border-b-2'>CATEGORIES</h1>
+                                            {cat?.map((item, index) => (
+                                                <label htmlFor="my-drawer-5" key={index} aria-label="close sidebar" onClick={() => handleClick(item)} className='text-lg py-1 border-b-2 flex items-center gap-3'>
+                                                    <input type="radio" name='check' />
+                                                    {item.toUpperCase()}
+                                                </label>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                                </label>
                             </div>
                         </div>
                     </>
