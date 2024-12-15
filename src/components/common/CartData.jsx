@@ -23,9 +23,7 @@ const CartData = () => {
                     {cart.length > 0 ?
                         <div className="flex flex-col gap-6 h-[70vh] overflow-scroll">
                             {cart.map((item) => {
-                                const { id, title, price, image, quantity } = item;
-                                console.log(quantity);
-
+                                const { id, title, price, image, quantity } = item
                                 return (
                                     <div key={id} className='flex gap-3 border'>
                                         <img src={image} className='h-[110px] object-contain w-[110px]' />

@@ -1,13 +1,14 @@
-import { setAddToCart, useDispatch, useSelector } from "../../utils/imports";
+import { setAddToCart, useDispatch, UserLertModal, useSelector } from "../../utils/imports";
 
 const Card = ({ item, badge }) => {
     
+    const isUser = useSelector(item => item?.users.user)
     
     const dispatch = useDispatch()
     const {id, title, price, image, description, rating, greate, name , discount } = item;
     return (
         <div className="card bg-base-100 w-full shadow-xl hover:scale-105 hover:shadow-2xl cursor-pointer">
-            {image ? <div onClick={()=>dispatch(setAddToCart(item))}>
+            {image ? <div onClick={()=> {isUser.length > 0 ? dispatch( setAddToCart(item) ) : document.getElementById('user_modal').showModal()}}>
                 <figure>
                     <img src={image} className="object-contain h-[150px]" />
                 </figure>
@@ -19,8 +20,9 @@ const Card = ({ item, badge }) => {
                     <p className="text-left h-20">{description?.slice(0, 50)}...</p>
                     <p className="text-left font-bold">${price}</p>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-outline w-full hover:bg-secondary cursor-pointer">Add To Cart</div>
+                        <div className="badge badge-outline w-full hover:bg-secondary">Add To Cart</div>
                     </div>
+                    <UserLertModal isUser/>
                 </div>
                
             </div> :

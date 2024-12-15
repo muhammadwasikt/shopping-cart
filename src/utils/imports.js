@@ -56,8 +56,13 @@ import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword } 
 import { auth } from "../firebase.js";
 import { toast, ToastContainer } from "react-toastify";
 import userReducer, { removeUser, setUser } from '../redux/reducers/usersreducer.js'
-import UserLertModal from "../components/common/UserLertModal.jsx";
+import UserLertModal from "../components/common/UserAlertModal.jsx";
+import SearchProducts from "../components/common/SearchProducts.jsx";
+import { MdClose } from "react-icons/md";
 
 
 
-export {Drawer ,userReducer ,UserLertModal ,removeUser,setUser , ToastContainer , toast ,SignUp ,SignIn ,signInWithEmailAndPassword ,SearchField ,auth ,initializeApp ,getAuth , createUserWithEmailAndPassword , IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, Sales, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }
+
+
+
+export {Drawer ,userReducer ,MdClose, SearchProducts ,UserLertModal ,removeUser,setUser , ToastContainer , toast ,SignUp ,SignIn ,signInWithEmailAndPassword ,SearchField ,auth ,initializeApp ,getAuth , createUserWithEmailAndPassword , IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, Sales, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }

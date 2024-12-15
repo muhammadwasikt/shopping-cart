@@ -64,7 +64,7 @@ const Drawer = ({ category, addToCart }) => {
                             <div className="menu bg-base-200 text-base-content min-h-full w-80 p-4 leading-7">
                                 <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/home'>Home</Link></label>
                                 <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/products'>Products</Link></label>
-                                <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/new-arrivals'>New Arrivals</Link></label>
+                                <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/sale'>Sale</Link></label>
                                 <label htmlFor="my-drawer" aria-label="close sidebar" >
                                     <div className='drawer-end'>
                                     <input id="my-drawer-5" type="checkbox" className="drawer-toggle" />

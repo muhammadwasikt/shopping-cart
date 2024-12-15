@@ -4,7 +4,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import ProductReducer from './reducers/allProductsReducer'
-import AddToCartReducer from "./reducers/addToCart";
+import AddToCartReducer from "./reducers/addToCart.js";
 import userReducer from "./reducers/usersreducer";
 
 

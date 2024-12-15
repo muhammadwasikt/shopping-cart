@@ -24,6 +24,9 @@ export default {
       wides: '1em',
     }
   },
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
   plugins: [
     daisyui
   ],

@@ -57,7 +57,9 @@ const CheckOutModal = () => {
                             <p className="text-lg font-bold">Total Amount: $ {toatalAmount}</p>
                         </div>
                         <div className="modal-action bottom-3 w-full flex px-4 justify-between">
-                            <button className="btn" onClick={() => navigate('/payment-form')}>Buy Now</button>
+                            <form method="dialog">
+                                <button className="btn" onClick={() => navigate('/payment-form')}>Buy Now</button>
+                            </form>
                             <form method="dialog">
                                 {/* if there is a button in form, it will close the modal */}
                                 <button className="btn">Close</button>
