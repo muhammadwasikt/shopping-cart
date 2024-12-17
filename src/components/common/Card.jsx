@@ -9,7 +9,7 @@ const Card = ({ item, badge }) => {
     const navigate = useNavigate()
 
     return (
-        <div className="card bg-base-100 w-full shadow-xl hover:scale-105 hover:shadow-2xl cursor-pointer">
+        <div className="card bg-base-100 w-full shadow-xl hover:scale-105 hover:shadow-2xl cursor-pointer border">
             {image ? <div>
             <div onClick={()=> navigate(`/products/detail/${id}`)}>
                 <figure>
