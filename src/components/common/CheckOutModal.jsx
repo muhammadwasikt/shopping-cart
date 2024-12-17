@@ -28,7 +28,7 @@ const CheckOutModal = () => {
                                             <div className="flex items-center w-full">
                                                 <img src={item.image} className="h-28 object-contain border-r" />
                                                 <div className="w-full flex flex-col gap-1">
-                                                    <h4 className="font-bold">{item.title.slice(0, 30).toUpperCase()}...</h4>
+                                                    <h4 className="font-bold">{item.title?.slice(0, 30).toUpperCase()}...</h4>
                                                     <p className="text-sm">QUANTITY: <span className="text-lg font-bold">{item.quantity}</span></p>
                                                     <p className="text-sm">TOTAL PRICE: <span className="text-lg font-bold">{item.price}</span></p>
                                                 </div>

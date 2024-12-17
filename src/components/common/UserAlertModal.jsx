@@ -1,11 +1,16 @@
-import { removeUser, useDispatch } from "../../utils/imports"
+import { auth, removeUser, signOut, toast, ToastContainer, useDispatch, userSetCart } from "../../utils/imports"
 
 
 const UserLertModal = ({ isUser }) => {
 
     const dispatch = useDispatch()
     const handleLogout = () => {
+        signOut(auth).then(() => {
         dispatch(removeUser([]))
+        dispatch(userSetCart([]))
+    }).catch((error) => {
+        toast.error(error)
+      })
     }
     return (
         <div>
@@ -64,6 +69,7 @@ const UserLertModal = ({ isUser }) => {
                         </div>
                     </div>
                 </dialog>}
+                <ToastContainer />
         </div>
     )
 }

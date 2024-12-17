@@ -18,10 +18,10 @@ import storage from "redux-persist/lib/storage"
 import { PersistGate } from 'redux-persist/integration/react';
 import { createSlice } from '@reduxjs/toolkit'
 import ProductReducer, { setProducts } from '../redux/reducers/allProductsReducer.js'
-import AddToCartReducer, { setAddToCart, setDeleteCart, setLessToCart } from '../redux/reducers/addToCart.js'
+import AddToCartReducer, { setAddToCart, setDeleteCart, setLessToCart, userSetCart } from '../redux/reducers/addToCart.js'
 import axios from 'axios'
 import AddProducts from "../redux/dispatch/AddProducts";
-import { useEffect, useState } from 'react';
+import { useEffect, useState , useRef } from 'react';
 import { useForm } from "react-hook-form"
 import { CgProfile } from "react-icons/cg"
 import { CiSearch } from "react-icons/ci"
@@ -47,22 +47,25 @@ import CartData from "../components/common/CartData";
 import SignIn from "../Auth/Users/SignIn";
 import CheckOutModal from "../components/common/CheckOutModal";
 import PaymentForm from "../pages/PaymentForm";
-import { IoCloseCircleOutline } from "react-icons/io5";
+import { IoCloseCircleOutline, IoEyeOff, IoEye } from "react-icons/io5";
 import SearchField from "../components/common/SearchField";
 import SignUp from "../Auth/Users/SignUp";
 import Drawer from "../components/common/Drawer.jsx";
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../firebase.js";
 import { toast, ToastContainer } from "react-toastify";
 import userReducer, { removeUser, setUser } from '../redux/reducers/usersreducer.js'
 import UserLertModal from "../components/common/UserAlertModal.jsx";
 import SearchProducts from "../components/common/SearchProducts.jsx";
 import { MdClose } from "react-icons/md";
+import ForgotPassword from "../Auth/Users/ForgotPassword.jsx";
+import Skeleton from "../components/common/Skeleton.jsx";
+import ProductModal from "../components/common/ProductDetail.jsx";
 
 
 
 
 
 
-export {Drawer ,userReducer ,MdClose, SearchProducts ,UserLertModal ,removeUser,setUser , ToastContainer , toast ,SignUp ,SignIn ,signInWithEmailAndPassword ,SearchField ,auth ,initializeApp ,getAuth , createUserWithEmailAndPassword , IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, Sales, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }
+export {Drawer ,userReducer ,ProductModal ,sendPasswordResetEmail ,Skeleton ,signOut ,ForgotPassword ,userSetCart ,IoEyeOff ,IoEye ,MdClose, SearchProducts ,UserLertModal ,useRef ,removeUser,setUser , ToastContainer , toast ,SignUp ,SignIn ,signInWithEmailAndPassword ,SearchField ,auth ,initializeApp ,getAuth , createUserWithEmailAndPassword , IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, Sales, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }

@@ -54,9 +54,12 @@ const AddToCartSlice = createSlice({
                 });
             }
         },
+        userSetCart:(state , {payload})=>{
+            state.addToCart = payload
+        }
     }
 })
 
 
-export const { setAddToCart, setDeleteCart, setLessToCart } = AddToCartSlice.actions
+export const { setAddToCart, setDeleteCart, setLessToCart , userSetCart } = AddToCartSlice.actions
 export default AddToCartSlice.reducer

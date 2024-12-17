@@ -7,7 +7,6 @@ const Header = () => {
     const [isMobile, setIsMobile] = useState(false)
     const navigate = useNavigate()
     const [isOpen , setIsOpen] = useState(false)
-    console.log(isOpen);
     
     const {
         register,

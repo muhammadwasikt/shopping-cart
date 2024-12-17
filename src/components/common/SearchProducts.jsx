@@ -1,6 +1,6 @@
+import { noProductFound } from "../../utils/imagesimport"
 import { Card, useParams, useSelector } from "../../utils/imports"
 
-const noProductFound = "/assets/images/product-not-found.jpeg"
 const SearchProducts = () => {
 
     const { title } = useParams()

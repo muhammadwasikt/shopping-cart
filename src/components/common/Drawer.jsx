@@ -10,6 +10,9 @@ const Drawer = ({ category, addToCart }) => {
     const handleClick = (cat) => {
         navigate(`/products/${cat}`)
     }
+    const handleNavigate = (e)=>{
+        navigate(e)
+    }
     return (
         <div className={category ? 'drawer-end' : addToCart ? 'drawer-end' : null}>
             {category ?
@@ -62,9 +65,9 @@ const Drawer = ({ category, addToCart }) => {
                         <div className="drawer-side mt-[72px]">
                             <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                             <div className="menu bg-base-200 text-base-content min-h-full w-80 p-4 leading-7">
-                                <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/home'>Home</Link></label>
-                                <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/products'>Products</Link></label>
-                                <label htmlFor="my-drawer" aria-label="close sidebar" ><Link to='/sale'>Sale</Link></label>
+                            <label htmlFor="my-drawer" aria-label="close sidebar" className='w-full' onClick={()=>handleNavigate("/home")}> Home </label>                            
+                                <label htmlFor="my-drawer" aria-label="close sidebar" onClick={()=>handleNavigate("/products")}>Products</label>
+                                <label htmlFor="my-drawer" aria-label="close sidebar" onClick={()=>handleNavigate("/sale")}>Sale</label>
                                 <label htmlFor="my-drawer" aria-label="close sidebar" >
                                     <div className='drawer-end'>
                                     <input id="my-drawer-5" type="checkbox" className="drawer-toggle" />

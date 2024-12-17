@@ -28,7 +28,7 @@ const CartData = () => {
                                     <div key={id} className='flex gap-3 border'>
                                         <img src={image} className='h-[110px] object-contain w-[110px]' />
                                         <div className='flex flex-col'>
-                                            <h1 className='text-[16px] font-bold h-[65px]'>{title.slice(0, 45)}...</h1>
+                                            <h1 className='text-[16px] font-bold h-[65px]'>{title?.slice(0, 45)}...</h1>
                                             <p>Quantity: {quantity}</p>
                                             <div className='flex justify-between items-center pr-2'>
                                                 <p className='text-lg font-extrabold'>Price: $ {price}</p>

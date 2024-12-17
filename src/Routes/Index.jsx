@@ -1,6 +1,7 @@
 import { AppLayout, Categories, createBrowserRouter, Home, MainPage, Sales, PageNotFound, Products} from "../utils/imports"
 import PaymentForm from "../pages/PaymentForm"
 import SearchProducts from "../components/common/SearchProducts"
+import ProductModal from "../components/common/ProductDetail"
 
 export const routes = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ export const routes = createBrowserRouter([
             {
                 path: 'products/search/:title',
                 element: <SearchProducts />
+            },
+            {
+                path: 'products/detail/:id',
+                element: <ProductModal />
             }
 
             
