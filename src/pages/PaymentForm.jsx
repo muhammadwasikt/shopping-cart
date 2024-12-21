@@ -33,9 +33,7 @@ const PaymentForm = () => {
   return (
     <div className="w-full px-4 py-6">
       <div className="flex flex-wrap gap-6 justify-between ">
-        {/* Left Section */}
         <div className="w-full p-6">
-          {/* Billing Info */}
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <h2 className="text-2xl font-semibold mb-2">Billing Info</h2>
@@ -94,16 +92,12 @@ const PaymentForm = () => {
                 </div>
               </div>
             </div>
-
-            {/* Payment Method */}
             <div className="mt-8">
               <h2 className="text-xl font-semibold mb-2">Payment Method</h2>
               <div className="flex justify-between text-gray-500 mb-4">
                 <span>Please Enter your Payment Method</span>
                 <span>Step 2 of 2</span>
               </div>
-
-              {/* Payment Options */}
               <div className="flex items-center gap-6 mb-4 w-full justify-between pr-3">
                 <div className="flex items-center gap-1">
                   <input
@@ -120,21 +114,17 @@ const PaymentForm = () => {
                     type="radio"
                     name="payment"
                     onChange={() => handlePaymentChange('COD')}
-                    checked={paymentMethod === 'COD'}
+                    checked={paymentMethod !== 'Online' || paymentMethod === 'COD'}
                     className="radio"
                   />
                   <span className="text-gray-700 font-medium">COD</span>
                 </div>
               </div>
-
-              {/* Payment Methods Images */}
               <div className="flex gap-5 w-full justify-end">
                 <img src={visaImg} alt="Visa" className="w-14" />
                 <img src={paypalImg} alt="MasterCard" className="w-14" />
               </div>
             </div>
-
-            {/* Conditional Card Details */}
             {paymentMethod === 'Online' && (
               <div className="mt-8">
                 <h2 className="text-xl font-semibold mb-2">Card Details</h2>

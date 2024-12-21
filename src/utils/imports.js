@@ -62,10 +62,10 @@ import { MdClose } from "react-icons/md";
 import ForgotPassword from "../Auth/Users/ForgotPassword.jsx";
 import Skeleton from "../components/common/Skeleton.jsx";
 import ProductModal from "../components/common/ProductDetail.jsx";
+import { BiSliderAlt } from "react-icons/bi";
 
 
 
 
 
-
-export {Drawer ,userReducer ,ProductModal ,sendPasswordResetEmail ,Skeleton ,signOut ,ForgotPassword ,userSetCart ,IoEyeOff ,IoEye ,MdClose, SearchProducts ,UserLertModal ,useRef ,removeUser,setUser , ToastContainer , toast ,SignUp ,SignIn ,signInWithEmailAndPassword ,SearchField ,auth ,initializeApp ,getAuth , createUserWithEmailAndPassword , IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, Sales, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }
+export {Drawer ,userReducer , BiSliderAlt,ProductModal ,sendPasswordResetEmail ,Skeleton ,signOut ,ForgotPassword ,userSetCart ,IoEyeOff ,IoEye ,MdClose, SearchProducts ,UserLertModal ,useRef ,removeUser,setUser , ToastContainer , toast ,SignUp ,SignIn ,signInWithEmailAndPassword ,SearchField ,auth ,initializeApp ,getAuth , createUserWithEmailAndPassword , IoCloseCircleOutline ,PaymentForm ,setLessToCart ,CheckOutModal ,setDeleteCart ,CartData ,MdDeleteOutline , NavLinks ,ProfileDropdown ,AddToCartReducer , setAddToCart , useNavigate , useParams,useEffect,FooterContent , useState, AddProducts, axios, useDispatch, useSelector, combineReducers, PageNotFound, AppLayout, Categories, MainPage, Sales, Products, Home, createBrowserRouter, createRoot, RouterProvider, routes, configureStore, Provider, store, Route, Routes, persistStore, persistReducer, storage, persistor, PersistGate, createSlice, ProductReducer, setProducts, useForm, CgProfile, CiSearch, HiBars3, MdAddShoppingCart, PiSignInThin, Link, Header, Hero, Footer, Outlet, Card, NewArrival, TopSellingProducts, userReveiws, OverHappyCustomers, BrandName, MergProducts }

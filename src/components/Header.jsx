@@ -1,5 +1,4 @@
-import { useNavigate } from "react-router"
-import { CiSearch, Drawer, NavLinks, PiSignInThin, ProfileDropdown, SignIn, SearchField, useEffect, useForm, useState, useSelector } from "../utils/imports"
+import { CiSearch, Drawer, NavLinks, PiSignInThin, ProfileDropdown, SignIn, SearchField, useEffect, useForm, useState, useSelector, useNavigate } from "../utils/imports"
 
 
 const Header = () => {
