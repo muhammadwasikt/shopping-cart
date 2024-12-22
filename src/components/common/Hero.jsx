@@ -14,7 +14,7 @@ const Hero = () => {
                         Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
                     </p>
                     <button className="text-primary bg-black py-[16px] px-[54px] rounded-full">Shop Now</button>
-                    <div className="stats flex gap-1 bg-accent max-sm:flex-wrap">
+                    <div className="stats flex gap-1 bg-accent max-sm:flex-wrap justify-center">
                         <div className="stat place-items-center bg-accent border-none max-w-[200px] justify-center items-center">
                             <div className="stat-title">Downloads</div>
                             <div className="stat-value">31K</div>
